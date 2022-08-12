@@ -12,18 +12,39 @@
     background-image: linear-gradient(90deg, #070928 5.01%, rgba(29, 47, 146, 0.5) 49.6%, #070928 97.58%);
     box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(40px);
-    border-radius: 10px;
+    border-radius: 1.03vh;
 
+    //border: 3px solid;
+    //border-image-source: linear-gradient(90.19deg, rgba(56, 115, 249, 0.4) -1.41%, #070928 45.08%, rgba(56, 115, 249, 0.4) 102.15%);
     a{
+        justify-self: center;
         font-size: 1.9vh;
-        color: white;
+        color: #F8F8FA;
         text-decoration: none;
-        margin-left: 20px;
-        margin-right: 20px;
     }
+
+    a:hover:not(.web-icon){
+        color: #7484FD;
+    }
+
+    a:active:not(.web-icon){
+        color: #7484FD;
+    }
+
     .web-icon{
         justify-self: left;
         font-size: 2.75vh;
         margin-left: 9.1vw;
+    }
+    .contact{
+        border: 0.25vh solid rgba(248, 248, 250, 1);
+        border-radius: 25px;
+        padding: 0.6vh 0.98vw;
+    }
+    .contact:active{
+        border: 2px solid #7484FD;
+    }
+    .contact:hover{
+        border: 2px solid #7484FD;
     }
 }
