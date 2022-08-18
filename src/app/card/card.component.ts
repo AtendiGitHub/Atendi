@@ -8,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input() cssVariables:{height:string, width:string, backgroundColor:string} = {height:"", width:"", backgroundColor:""};
-  @Input() icon:any;
-  @Input() title:string = "Privacy & Confident";
-  @Input() body:string = "Private and confidential virtual server solution customized to your requirements";
+  @Input() iconPath:string = "";
+  @Input() title:string = "";
+  @Input() body:string = "";
 
 
   constructor() { }

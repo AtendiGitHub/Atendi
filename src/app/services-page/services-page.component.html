@@ -1,3 +1,13 @@
 <div class="background-box">
-    <app-card></app-card>
+
+    <h1 class="header">Our Services</h1>
+    
+    <div class="service-cards">
+        <app-card class="card" *ngFor="let card of cardsData"
+        [iconPath]="card.iconPath"
+        [title]="card.title"
+        [body]="card.body">
+        </app-card>
+    </div>
+    
 </div>
