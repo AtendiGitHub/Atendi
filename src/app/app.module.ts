@@ -18,7 +18,7 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     BrowserModule,
-    // AngularSvgIconModule
+    AngularSvgIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

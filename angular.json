@@ -109,5 +109,7 @@
       }
     }
   },
-  "defaultProject": "Atendi"
+  "cli": {
+    "analytics": false
+  }
 }
