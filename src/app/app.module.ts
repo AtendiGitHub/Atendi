@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularSvgIconModule } from 'angular-svg-icon'
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -17,8 +16,7 @@ import { CardComponent } from './card/card.component';
     CardComponent
   ],
   imports: [
-    BrowserModule,
-    AngularSvgIconModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
