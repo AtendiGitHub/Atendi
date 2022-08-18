@@ -33,7 +33,7 @@ export class ServicesPageComponent implements OnInit {
   },
 
   {
-    iconPath:"../../assets/icon-svg/gear.svg",
+    iconPath:"../../assets/icon-svg/gear-icon.svg",
     title:"Operating Systems",
     body:"Private and confidential virtual server solution customized to your requirements"
   },
