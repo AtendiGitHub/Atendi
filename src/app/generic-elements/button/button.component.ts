@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.less']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() context:string = "click me";
 
 }
