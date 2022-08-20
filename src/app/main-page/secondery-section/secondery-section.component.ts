@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeconderySectionComponent implements OnInit {
 
-  cardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = 
-  {height:'22.49742vh', width:'21.9791vw', backgroundColor:'black', borderRadius:'0px'};
+  expCardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = 
+  {height:'50.49742vh', width:'28.9791vw', backgroundColor:'transparent', borderRadius:'0px'};
+
+  problemCardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = 
+  {height:'50.49742vh', width:'28.9791vw', backgroundColor:'transparent', borderRadius:'0px'};
   
   cardsData:{iconPath:string, title:string, body:string}[] = [
     {

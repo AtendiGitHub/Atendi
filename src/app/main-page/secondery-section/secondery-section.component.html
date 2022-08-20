@@ -1,6 +1,10 @@
-<div class="cards">
+
+<app-card class="problem-card"
+[cssVariables]="problemCardCssVariables"></app-card>
+
+<div class="exp-card">
     <app-card *ngFor="let card of cardsData" class="card"
-    [cssVariables]="cardCssVariables"
+    [cssVariables]="expCardCssVariables"
     [iconPath]="card.iconPath"
     [title]="card.title"
     [body]="card.body"></app-card>
