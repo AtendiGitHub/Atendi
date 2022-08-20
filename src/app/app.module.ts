@@ -7,7 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { CardComponent } from './generic-elements/card/card.component';
 import { MainSectionComponent } from './main-page/main-section/main-section.component';
 import { ButtonComponent } from './generic-elements/button/button.component';
-import { SeconderySectionComponent } from './secondery-section/secondery-section.component';
+import { SeconderySectionComponent } from './main-page/secondery-section/secondery-section.component';
 
 @NgModule({
   declarations: [
