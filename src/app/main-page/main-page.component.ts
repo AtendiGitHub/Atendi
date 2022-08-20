@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  cardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = {height:'200px', width:'200px', backgroundColor:'white', borderRadius:'0px'};
+
   constructor() { }
 
   ngOnInit(): void {

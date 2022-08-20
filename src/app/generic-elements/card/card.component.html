@@ -1,4 +1,9 @@
-<div class="card-body" style="@background-color:blueviolet">
+<div class="card-body" 
+[ngStyle]="{'background': cssVariables.backgroundColor, 
+'height':cssVariables.height,
+'width':cssVariables.width,
+'border-radius':cssVariables.borderRadius}">
+
     <div class="card-content">
         <div class="icon">
             <img [src]="iconPath" alt="icon">
