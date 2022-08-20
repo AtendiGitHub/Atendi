@@ -1,7 +1,11 @@
 <div class="background-box">
     <app-main-section class="main-section"></app-main-section>
-    <app-card class="card"
-    [cssVariables]="cardCssVariables"
-    [iconPath]="'../../assets/icon-svg/dots/one-dot.svg'"></app-card>
+    <div class="cards">
+        <app-card *ngFor="let card of cardsData" class="card"
+        [cssVariables]="cardCssVariables"
+        [iconPath]="card.iconPath"
+        [title]="card.title"
+        [body]="card.body"></app-card>
+    </div>
 </div>
 
