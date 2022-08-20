@@ -11,7 +11,7 @@ export class SeconderySectionComponent implements OnInit {
   {height:'50.49742vh', width:'28.9791vw', backgroundColor:'transparent', borderRadius:'0px'};
 
   problemCardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = 
-  {height:'50.49742vh', width:'28.9791vw', backgroundColor:'transparent', borderRadius:'0px'};
+  {height:'20.0206vh', width:'45.1041vw', backgroundColor:'transparent', borderRadius:'0px'};
   
   cardsData:{iconPath:string, title:string, body:string}[] = [
     {
