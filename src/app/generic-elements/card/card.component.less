@@ -1,10 +1,26 @@
+:root{
+
+    //card css var
+    --card-width: 43.03vh;
+    --card-height: 23.4375vw;
+    --card-background: rgba(248, 248, 250, 0.1);
+    --card-border-radius: 10px;
+
+    //content css var
+    --content-margin:0;
+    --content-width:10vw;
+
+    //title css var
+    --title-margin:0;
+}
+
 
 .card-body{
 
-    height: 43.03vh;
-    width: 23.4375vw;
-    background: rgba(248, 248, 250, 0.1);
-    border-radius: 10px;
+    height:var(--card-width);
+    width: var(--card-height);
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
     color: rgba(248, 248, 250, 1);
 
     display: flex;
@@ -14,18 +30,19 @@
 
     .card-content{
 
-        width: 20vw;
+        width:var(--content-width);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: var(--content-margin);
 
         .title p{
 
             white-space: nowrap;
             font-weight: 600;
             font-size: 1.171875vw;
-            margin: 0;
+            margin: var(--title-margin);
 
         }
 
