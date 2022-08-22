@@ -9,24 +9,15 @@ export class CardComponent implements OnInit{
 
   @Input() cssVariables:{} ={ 
 
-    cardCssVariabls:
-    {
-    height:"", 
-    width:"", 
-    backgroundColor:"", 
-    borderRadius:""
-    },
+    cardWidth: "",
+    cardHeight: "",
+    cardBackground: "",
+    cardBorderRadius: "",
 
-    contentCssVariables:
-    {
-      width:"",
-      margin:"",
-    },
+    contentWidth: "",
+    contentMargin: "",
 
-    titleCssVariables:
-    {
-      margin:""
-    }
+    titleMargin: ""
   }
   
   @Input() iconPath:string = "";
