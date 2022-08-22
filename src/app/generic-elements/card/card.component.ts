@@ -7,8 +7,27 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit{
 
-  @Input() cssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} =
-  {height:"", width:"", backgroundColor:"", borderRadius:""};
+  @Input() cssVariables:{} ={ 
+
+    cardCssVariabls:
+    {
+    height:"", 
+    width:"", 
+    backgroundColor:"", 
+    borderRadius:""
+    },
+
+    contentCssVariables:
+    {
+      width:"",
+      margin:"",
+    },
+
+    titleCssVariables:
+    {
+      margin:""
+    }
+  }
   
   @Input() iconPath:string = "";
   @Input() title:string = "";

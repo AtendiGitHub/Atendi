@@ -1,9 +1,4 @@
-<div class="card-body" 
-[ngStyle]="{'background': cssVariables.backgroundColor, 
-'height':cssVariables.height,
-'width':cssVariables.width,
-'border-radius':cssVariables.borderRadius}">
-
+<div class="card-body">
     <div class="card-content" [style.--width]="''">
         <div class="icon" *ngIf="iconPath != 'none'">
             <img [src]="iconPath" alt="icon">
@@ -17,3 +12,8 @@
     </div>
    
 </div>
+
+<!-- [ngStyle]="{'background': cssVariables.backgroundColor, 
+'height':cssVariables.height,
+'width':cssVariables.width,
+'border-radius':cssVariables.borderRadius}" -->
