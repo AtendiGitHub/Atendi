@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-card',
@@ -6,6 +7,13 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   styleUrls: ['./card.component.less']
 })
 export class CardComponent implements OnInit{
+
+  @HostBinding("attr.style")
+  public get valueAsStyle(): any {
+    return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${value}`);
+  }
+
+  constructor(private sanitizer: DomSanitizer) {}
 
   @Input() cssVariables:{} ={ 
 
