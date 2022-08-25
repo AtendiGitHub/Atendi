@@ -9,8 +9,15 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class CardComponent implements OnInit{
 
   @HostBinding("attr.style")
+
+
   public get valueAsStyle(): any {
-    return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${value}`);
+
+    for (let key in this.cssVariables) {
+      console.log(key )
+    return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${"value"}`);
+    }
+    
   }
 
   constructor(private sanitizer: DomSanitizer) {}
@@ -33,6 +40,5 @@ export class CardComponent implements OnInit{
   @Input() body:string = "";
 
   ngOnInit(): void {
-    console.log(Object.keys(this.cssVariables));
   }
 }

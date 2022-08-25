@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesPageComponent implements OnInit {
 
-  cardCssVariables:{height:string, width:string, backgroundColor:string, borderRadius:string} = {height:'43.03vh', width:'23.4375vw', backgroundColor:'rgba(248, 248, 250, 0.1)', borderRadius:'10px'};
+  cardCssVariables:{} =
+  { 
+    cardWidth: "",
+    cardHeight: "33",
+    cardBackground: "black",
+    cardBorderRadius: "10px",
+
+    contentWidth: "",
+    contentMargin: "",
+
+    titleMargin: ""
+  }
 
   cardsData:{iconPath:string, title:string, body:string}[] = [
   {
