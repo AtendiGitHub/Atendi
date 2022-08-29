@@ -9,15 +9,15 @@ export class ServicesPageComponent implements OnInit {
 
   cardCssVariables:{} =
   { 
-    cardWidth: "",
-    cardHeight: "33",
-    cardBackground: "black",
+    cardWidth: "23.4375vw",
+    cardHeight: "43.03405vh",
+    cardBackground: "rgba(248, 248, 250, 0.1)",
     cardBorderRadius: "10px",
 
-    contentWidth: "",
-    contentMargin: "",
+    contentMargin: "  1.289vh 2.302vw 3.7399vh 2.302vw",
+    contentWidth: "fit-content",
 
-    titleMargin: ""
+    titleMargin: "3.159vh 0  1.289vh 0"
   }
 
   cardsData:{iconPath:string, title:string, body:string}[] = [

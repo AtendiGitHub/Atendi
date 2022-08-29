@@ -16,8 +16,8 @@ export class CardComponent implements OnInit{
     cardBackground: "",
     cardBorderRadius: "",
 
-    contentWidth: "",
     contentMargin: "",
+    contentWidth: "",
 
     titleMargin: ""
   }
