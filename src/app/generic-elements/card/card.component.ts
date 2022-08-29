@@ -26,11 +26,6 @@ export class CardComponent implements OnInit{
   @Input() title:string = "";
   @Input() body:string = "";
 
-  
-  bindCssVariablesTo(){
-
-  }
-
   ngOnInit(): void {
 
     for(const key in this.cssVariables){

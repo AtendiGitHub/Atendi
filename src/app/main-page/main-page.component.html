@@ -1,5 +1,38 @@
 <div class="background-box">
-    <app-main-section class="main-section"></app-main-section>
-    <app-secondery-section></app-secondery-section>
+    <div class="main-section">
+        <div class="container">
+            <div class="content">
+                <h1 class="header">Virtual Private Server </h1>
+                <h2 class="body">Customizable & Scalable solution </h2>
+                <app-button class="button" [context]="'Start Free Trial'" ></app-button>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/icon-svg/universe-main-icon.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+
+    <div class="secondery-section">
+        <div class="content">
+
+            <div class="problem-card-conteiner">
+                <app-card class="problem-card"
+                [iconPath]="'none'"
+                [title]="'The Problem'"
+                [body]="'The global economy environment creates unique challenges that require new solutions. Virtual workspace is becoming a necessity, rather than luxury. There is a necessary for'"
+                [cssVariables]="problemCardCssVariables">
+                </app-card>
+            </div>
+        
+            <div class="solution-cards-conteiner">
+                <app-card *ngFor="let card of cardsData"
+                    [iconPath]="card.iconPath"
+                    [title]="card.title"
+                    [body]="card.body"
+                    [cssVariables]="solutionCardCssVariables">
+                </app-card>
+            </div> 
+        </div>
+    </div>
 </div>
 

@@ -14,7 +14,7 @@ export class ServicesPageComponent implements OnInit {
     cardBackground: "rgba(248, 248, 250, 0.1)",
     cardBorderRadius: "10px",
 
-    contentMargin: "  1.289vh 2.302vw 3.7399vh 2.302vw",
+    contentMargin: "  1.289vh 2.302vw 1.7399vh 2.302vw",
     contentWidth: "fit-content",
 
     titleMargin: "3.159vh 0  1.289vh 0"
