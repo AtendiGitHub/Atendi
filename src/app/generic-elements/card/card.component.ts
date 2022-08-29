@@ -8,17 +8,18 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CardComponent implements OnInit{
 
-  @HostBinding("attr.style")
+  // @HostBinding("attr.style")
 
 
-  public get valueAsStyle(): any {
+  // public get valueAsStyle(): any {
 
-    for (let key in this.cssVariables) {
-      console.log(key )
-    return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${"value"}`);
-    }
+  //   for (let key in this.cssVariables) {
+  //     console.log(key)
+  //   return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${"black"}`);
+  //   }
     
-  }
+  // }
+  
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -40,5 +41,8 @@ export class CardComponent implements OnInit{
   @Input() body:string = "";
 
   ngOnInit(): void {
+    for (let key in this.cssVariables) {
+      console.log(key)
+    }
   }
 }
