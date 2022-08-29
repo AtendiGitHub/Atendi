@@ -1,5 +1,4 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -8,22 +7,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CardComponent implements OnInit{
 
-  // @HostBinding("attr.style")
 
-
-  // public get valueAsStyle(): any {
-
-  //   for (let key in this.cssVariables) {
-  //     console.log(key)
-  //   return this.sanitizer.bypassSecurityTrustStyle(`--cardBackground: ${"black"}`);
-  //   }
-    
-  // }
-  
-
-  constructor(private sanitizer: DomSanitizer) {}
-
-  @Input() cssVariables:{} ={ 
+  constructor(private host: ElementRef<HTMLElement>){}
+  @Input() cssVariables:any ={ 
 
     cardWidth: "",
     cardHeight: "",
@@ -40,9 +26,17 @@ export class CardComponent implements OnInit{
   @Input() title:string = "";
   @Input() body:string = "";
 
+  
+  bindCssVariablesTo(){
+
+  }
+
   ngOnInit(): void {
-    for (let key in this.cssVariables) {
-      console.log(key)
+
+    for(const key in this.cssVariables){
+      this.host.nativeElement.style.setProperty(`--${key}`, this.cssVariables[key]);
     }
+    // console.log(Object.keys(this.cssVariables))
+    
   }
 }
