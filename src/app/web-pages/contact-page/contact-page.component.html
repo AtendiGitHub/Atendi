@@ -6,20 +6,19 @@
     <form class="form" [formGroup]="userData">
 
         <div class="row">
-            <input id="first-name" type="text" formControlName="firstName">
-            <input id="last-name" type="text" formControlName="lastName">
+            <input id="first-name" type="text" formControlName="firstName" placeholder="First name">
+            <input id="last-name" type="text" formControlName="lastName" placeholder="Last name">
         </div>
 
         <div class="row">
-            <input id="email" type="email" formControlName="email">
+            <input id="email" type="email" formControlName="email" placeholder="Email">
         </div>
 
         <div class="row">
-            <input id="phone" type="text" formControlName="phone">
-            <input id="country" type="text" formControlName="country">
+            <input id="phone" type="text" formControlName="phone" placeholder="Phone">
+            <input id="country" type="text" formControlName="country" placeholder="Country">
         </div>
-        
     </form>
+    <app-button [context]="'Lets Tallk'"></app-button>
 
-    <button (click)="log()">Click</button>
 </div>
