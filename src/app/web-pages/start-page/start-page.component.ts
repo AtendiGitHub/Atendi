@@ -15,10 +15,10 @@ export class StartPageComponent implements OnInit {
     cardBackground: "rgba(52, 86, 255, 1)",
     cardBorderRadius: "0",
 
-    contentMargin: "  0",
+    contentMargin: "0  3vw 0  3vw",
     contentWidth: "fit-content",
 
-    titleMargin: "0"
+    titleMargin: "-18px 0 0 0 "
   }
 
   cardsData:{iconPath:string, title:string, body:string}[] = [
