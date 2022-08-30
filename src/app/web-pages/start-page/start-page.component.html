@@ -1,10 +1,15 @@
 <div class="background-box">
-    
-    <app-card class="card" *ngFor="let card of cardsData"
-    [iconPath]="card.iconPath"
-    [title]="card.title"
-    [body]="card.body"
-    [cssVariables]="cardCssVariables"
-    >
-    </app-card>
+
+    <p class="title">VPS Start Plan</p>
+    <p class="secondery-title"> 1 vCPU Core 1024 MB Memory 25 GB Storage</p>
+
+    <div class="cards">
+        <app-card class="card" *ngFor="let card of cardsData"
+            [iconPath]="card.iconPath"
+            [title]="card.title"
+            [body]="card.body"
+            [cssVariables]="cardCssVariables"
+            >
+        </app-card> 
+    </div>
 </div>
