@@ -2,12 +2,14 @@
     
     width: 100%;
     height: 87.4097vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .title{
         font-weight: 600;
         font-size: 43.95px;
         color: white;
-        text-align: center;
     }
     
     .benefits-circle{
@@ -15,5 +17,33 @@
         width: 23vw;
         border-radius: 50%;
         border: 1.66px solid rgba(52, 86, 255, 1);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dots-square{
+            
+            position: absolute;
+            height: 31.5vh;
+            width: 16.5vw;
+
+            img{
+                width: 22%;
+            }
+            .row-dots{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: -2.34375vw;
+                margin-right: -2.34375vw;
+            }
+            .top{
+                margin-top: -4.6439vh;
+            }
+            .bottom{
+                margin-top:  22.187vh;
+            }
+        }
     }
 }
