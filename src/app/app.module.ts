@@ -9,6 +9,7 @@ import { ButtonComponent } from './generic-elements/button/button.component';
 import { BenefitsPageComponent } from './web-pages/benefits-page/benefits-page.component';
 import { StartPageComponent } from './web-pages/start-page/start-page.component';
 import { PaymentSectionComponent } from './web-pages/payment-section/payment-section.component';
+import { ContactPageComponent } from './web-pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { PaymentSectionComponent } from './web-pages/payment-section/payment-sec
     ServicesPageComponent,
     MainPageComponent,
     CardComponent,   
-    ButtonComponent, BenefitsPageComponent, StartPageComponent, PaymentSectionComponent
+    ButtonComponent, BenefitsPageComponent, StartPageComponent, PaymentSectionComponent, ContactPageComponent
   ],
   imports: [
     BrowserModule
