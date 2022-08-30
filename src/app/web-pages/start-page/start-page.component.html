@@ -1,3 +1,10 @@
 <div class="background-box">
     
+    <app-card class="card" *ngFor="let card of cardsData"
+    [iconPath]="card.iconPath"
+    [title]="card.title"
+    [body]="card.body"
+    [cssVariables]="cardCssVariables"
+    >
+    </app-card>
 </div>
