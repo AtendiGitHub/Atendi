@@ -10,9 +10,11 @@
         font-weight: 600;
         font-size: 43.95px;
         color: white;
+        margin-top: 10vh;
     }
-    
+
     .benefits-circle{
+        margin-top: 8.7vh;
         height: 45vh;
         width: 23vw;
         border-radius: 50%;
@@ -38,11 +40,62 @@
                 margin-left: -2.34375vw;
                 margin-right: -2.34375vw;
             }
+
             .top{
                 margin-top: -4.6439vh;
             }
+
+            //text benefits
+            .top::after{
+                content: "Very competitive and transparent pricing";
+                width: 282px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-weight: 400;
+                font-size: 22.5px;
+                margin-left: -260px;
+                margin-top: -110px;
+            }
+
+            .top::before{
+                content: "No Setup Fees & Free Migration Support";
+                position: absolute;
+                width: 285px;
+                text-align: center;
+                color: white;
+                font-weight: 400;
+                font-size: 22.5px;
+                margin-left: 375px;
+                margin-top: -110px;
+            }
+
+
             .bottom{
                 margin-top:  22.187vh;
+            }
+
+            .bottom::after{
+                content: "Fast delivery at the start of service";
+                width: 282px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-weight: 400;
+                font-size: 22.5px;
+                margin-left: -260px;
+                margin-top: 90px;
+            }
+            .bottom::before{
+                content: "Total access & control";
+                width: 282px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-weight: 400;
+                font-size: 22.5px;
+                margin-left: 375px;
+                margin-top: 90px;
             }
         }
     }
