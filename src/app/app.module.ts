@@ -10,6 +10,7 @@ import { BenefitsPageComponent } from './web-pages/benefits-page/benefits-page.c
 import { StartPageComponent } from './web-pages/start-page/start-page.component';
 import { PaymentSectionComponent } from './web-pages/payment-section/payment-section.component';
 import { ContactPageComponent } from './web-pages/contact-page/contact-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContactPageComponent } from './web-pages/contact-page/contact-page.comp
     ButtonComponent, BenefitsPageComponent, StartPageComponent, PaymentSectionComponent, ContactPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

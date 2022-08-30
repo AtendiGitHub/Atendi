@@ -1,3 +1,25 @@
 <div class="background-box">
 
+    <p class="title"></p>
+    <p class="secondery-title"></p>
+
+    <form class="form" [formGroup]="userData">
+
+        <div class="row">
+            <input id="first-name" type="text" formControlName="firstName">
+            <input id="last-name" type="text" formControlName="lastName">
+        </div>
+
+        <div class="row">
+            <input id="email" type="email" formControlName="email">
+        </div>
+
+        <div class="row">
+            <input id="phone" type="text" formControlName="phone">
+            <input id="country" type="text" formControlName="country">
+        </div>
+        
+    </form>
+
+    <button (click)="log()">Click</button>
 </div>
