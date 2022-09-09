@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import * as countriesData from '../../../assets/countries.json'
+import * as countriesData from '../../../assets/countries.json';
 
 @Component({
   selector: 'app-contact-page',
@@ -9,7 +9,9 @@ import * as countriesData from '../../../assets/countries.json'
 })
 export class ContactPageComponent implements OnInit {
 
-  userData = new FormGroup({
+  @Output() userInputData = new EventEmitter<{}>();
+
+  userData:any = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
@@ -17,10 +19,14 @@ export class ContactPageComponent implements OnInit {
     country: new FormControl('')
   });
 
-  countries:any = (countriesData as any).default
+  countries:any = (countriesData as any).default;
+
+  sendData(){
+    this.userInputData.emit(this.userData.value);
+    console.log(this.userData.value);
+  }
 
   ngOnInit(): void {
-    console.log(this.countries);
   }
 
 }

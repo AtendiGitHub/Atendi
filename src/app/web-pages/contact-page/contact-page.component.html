@@ -18,11 +18,11 @@
         <div class="row">
             <input id="phone" type="text" formControlName="phone" placeholder="Phone">
             <select name="countries" id="countries">
-            <option *ngFor="let country of countries"
-            value="">{{country.name}}</option>
+                <option *ngFor="let country of countries"
+                [value]="country.name">{{country.name}}</option>
             </select>
         </div>
     </form>
-    <app-button class="btn" [context]="'Lets Tallk'"></app-button>
+    <app-button class="btn" [context]="'Lets Tallk'" (click)="sendData()"></app-button>
 
 </div>
