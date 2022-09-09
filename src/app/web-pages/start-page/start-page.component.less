@@ -49,12 +49,26 @@
     }
 
     .card::ng-deep{
-       
+        
         .card-content{
-            
+
             .title p{
                 font-size:  3.57604vw !important;
             }
+        }
+    }
+    .card:first-child::ng-deep{
+
+        .card-body{
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+    .card:last-child::ng-deep{
+
+        .card-body{
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
         }
     }
 }
