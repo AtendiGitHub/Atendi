@@ -17,7 +17,8 @@ export class ServicesPageComponent implements OnInit {
     contentMargin: "  1.289vh 2.302vw 1.7399vh 2.302vw",
     contentWidth: "fit-content",
 
-    titleMargin: "3.159vh 0  1.289vh 0"
+    titleMargin: "3.159vh 0  1.289vh 0",
+    cardPadding: "4vh 0 0 0"
   }
 
   cardsData:{iconPath:string, title:string, body:string}[] = [

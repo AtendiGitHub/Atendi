@@ -17,7 +17,10 @@
 
         <div class="row">
             <input id="phone" type="text" formControlName="phone" placeholder="Phone">
-            <input id="country" type="text" formControlName="country" placeholder="Country">
+            <select name="countries" id="countries">
+            <option *ngFor="let country of countries"
+            value="">{{country.name}}</option>
+            </select>
         </div>
     </form>
     <app-button class="btn" [context]="'Lets Tallk'"></app-button>

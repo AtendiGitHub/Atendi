@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import * as countriesData from '../../../assets/countries.json'
 
 @Component({
   selector: 'app-contact-page',
@@ -16,11 +17,10 @@ export class ContactPageComponent implements OnInit {
     country: new FormControl('')
   });
 
-  log(){
-    console.log(this.userData);
-  }
+  countries:any = (countriesData as any).default
 
   ngOnInit(): void {
+    console.log(this.countries);
   }
 
 }

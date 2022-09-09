@@ -11,14 +11,15 @@ export class StartPageComponent implements OnInit {
   cardCssVariables:{} =
   { 
     cardWidth: "26.35416vw",
-    cardHeight: "36.4293vh",
+    cardHeight: "39.4293vh",
     cardBackground: "rgba(52, 86, 255, 1)",
     cardBorderRadius: "0",
 
     contentMargin: "0  3vw 0  3vw",
     contentWidth: "fit-content",
 
-    titleMargin: "-18px 0 0 0 "
+    titleMargin: "-18px 0 0 0 ",
+    cardPadding: "2vh 0 0 0"
   }
 
   cardsData:{iconPath:string, title:string, body:string}[] = [
