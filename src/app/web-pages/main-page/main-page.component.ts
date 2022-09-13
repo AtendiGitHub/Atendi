@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainPageComponent{
 
-   //needs refactoring
    solutionCardCssVariables:{} = {
 
     cardWidth: "21.979vw",
