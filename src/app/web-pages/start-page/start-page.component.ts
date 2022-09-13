@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.less']
 })
-export class StartPageComponent implements OnInit {
+export class StartPageComponent{
 
 
   cardCssVariables:{} =
@@ -13,7 +13,6 @@ export class StartPageComponent implements OnInit {
     cardWidth: "26.35416vw",
     cardHeight: "39.4293vh",
     cardBackground: "rgba(52, 86, 255, 1)",
-    cardBorderRadius: "0",
 
     contentMargin: "0  3vw 0  3vw",
     contentWidth: "fit-content",
@@ -39,7 +38,4 @@ export class StartPageComponent implements OnInit {
       body:"Each VPS may be ordered with its own resource specifications and location"
     }
   ]
-  ngOnInit(): void {
-  }
-
 }

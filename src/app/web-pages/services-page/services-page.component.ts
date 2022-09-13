@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-services-page',
   templateUrl: './services-page.component.html',
   styleUrls: ['./services-page.component.less']
 })
-export class ServicesPageComponent implements OnInit {
+export class ServicesPageComponent{
 
   cardCssVariables:{} =
   { 
@@ -14,7 +14,7 @@ export class ServicesPageComponent implements OnInit {
     cardBackground: "rgba(248, 248, 250, 0.1)",
     cardBorderRadius: "10px",
 
-    contentMargin: "  1.289vh 2.302vw 1.7399vh 2.302vw",
+    contentMargin: " 1.289vh 2.302vw 1.7399vh 2.302vw",
     contentWidth: "fit-content",
 
     titleMargin: "3.159vh 0  1.289vh 0",
@@ -58,9 +58,5 @@ export class ServicesPageComponent implements OnInit {
     body:"Ability to clone your entire VPS to image and deploy it"
   }
 ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

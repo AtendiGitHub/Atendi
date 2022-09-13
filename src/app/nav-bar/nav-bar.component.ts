@@ -10,8 +10,6 @@ import { HostListener } from "@angular/core";
 })
 export class NavBarComponent {
 
-  navbarLinks:string[] = ["ATENDI", "ABOUT US", "SERVICES", "BENEFITS", "START", "CONTACT"]
-
   @Output() pageTarget = new EventEmitter<string>();
   @HostListener('window:scroll', ['$event'])
 

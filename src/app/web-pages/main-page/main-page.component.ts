@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.less']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent{
 
    //needs refactoring
    solutionCardCssVariables:{} = {
@@ -13,25 +13,18 @@ export class MainPageComponent implements OnInit {
     cardWidth: "21.979vw",
     cardHeight: "23.5294vh",
     cardBackground: "transparent",
-    cardBorderRadius: "0",
-
-    contentMargin: "",
-    contentWidth: "",
-
-    titleMargin: ""
+    cardBorderRadius: "0"
+    
   }
+
   problemCardCssVariables:{} = {
 
     cardWidth: "45.10vw",
     cardHeight: "17.54vh",
     cardBackground: "transparent",
-    cardBorderRadius: "0",
-
-    contentMargin: "",
-    contentWidth: "",
-
-    titleMargin: ""
+    cardBorderRadius: "0"
   }
+
   cardsData:{iconPath:string, title:string, body:string}[] = [
     {
       iconPath:"../../assets/icon-svg/dots/one-dot.svg",
@@ -49,7 +42,5 @@ export class MainPageComponent implements OnInit {
       body:"Where the participants can comfortably access this classroom, conference room, team meeting, or any other remote work location from the safety and comfort of their home."
     }
   ]
-  ngOnInit(): void {
-  }
 
 }

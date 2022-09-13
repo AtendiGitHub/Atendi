@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import * as countriesData from '../../../assets/countries.json';
 
@@ -7,11 +7,11 @@ import * as countriesData from '../../../assets/countries.json';
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.less']
 })
-export class ContactPageComponent implements OnInit {
+export class ContactPageComponent{
 
   @Output() userInputData = new EventEmitter<{}>();
 
-  userData:any = new FormGroup({
+  userData:FormGroup = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
@@ -19,14 +19,10 @@ export class ContactPageComponent implements OnInit {
     country: new FormControl('')
   });
 
-  countries:any = (countriesData as any).default;
+  countries:{name:string}[] = (countriesData as any).default;
 
   sendData(){
     this.userInputData.emit(this.userData.value);
-    console.log(this.userData.value);
   }
-
-  ngOnInit(): void {
-  }
-
+  
 }

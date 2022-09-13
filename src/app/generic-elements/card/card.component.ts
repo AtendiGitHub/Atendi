@@ -9,7 +9,8 @@ export class CardComponent implements OnInit{
 
 
   constructor(private host: ElementRef<HTMLElement>){}
-  @Input() cssVariables:any ={ 
+
+  @Input() cssVariables:any = { 
 
     cardWidth: "",
     cardHeight: "",
@@ -31,7 +32,6 @@ export class CardComponent implements OnInit{
     for(const key in this.cssVariables){
       this.host.nativeElement.style.setProperty(`--${key}`, this.cssVariables[key]);
     }
-    // console.log(Object.keys(this.cssVariables))
     
   }
 }
