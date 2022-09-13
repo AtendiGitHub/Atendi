@@ -11,6 +11,21 @@ import { StartPageComponent } from './web-pages/start-page/start-page.component'
 import { PaymentSectionComponent } from './web-pages/payment-section/payment-section.component';
 import { ContactPageComponent } from './web-pages/contact-page/contact-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routes: Routes = [
+  { path: 'main', component: MainPageComponent },
+  { path: 'service', component: ServicesPageComponent },
+  { path: 'benefits', component: BenefitsPageComponent },
+  { path: 'start', component: StartPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+
+];
+// const routerOptions: ExtraOptions = {
+//   anchorScrolling: "enabled"
+//   //scrollPositionRestoration: "enabled"
+// };
 
 @NgModule({
   declarations: [
@@ -19,11 +34,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     ServicesPageComponent,
     MainPageComponent,
     CardComponent,   
-    ButtonComponent, BenefitsPageComponent, StartPageComponent, PaymentSectionComponent, ContactPageComponent
+    ButtonComponent, 
+    BenefitsPageComponent, 
+    StartPageComponent, 
+    PaymentSectionComponent, 
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    [RouterModule.forRoot(routes)]
   ],
   providers: [],
   bootstrap: [AppComponent]

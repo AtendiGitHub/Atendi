@@ -1,8 +1,10 @@
-<div class="nav-bar">
-    <a class="web-icon" href="">ATENDI</a>
-    <a href="">ABOUT US</a>
-    <a href="">SERVICES</a>
-    <a href="">BENEFITS</a>
-    <a href="">START</a>
-    <a class="contact" href="">CONTACT</a>
+<div class="nav-bar" (click)="sendSelectedPage($event)">
+
+    <a class="web-icon">ATENDI</a>
+    <a class="main" [routerLink]="['/main']">ABOUT US</a>
+    <a class="service" [routerLink]="['/service']">SERVICES</a>
+    <a class="benefits" [routerLink]="['/benefits']">BENEFITS</a>
+    <a class="start" [routerLink]="['/start']">START</a>
+    <a class="contact" [routerLink]="['/contact']">CONTACT</a>
+    
 </div>

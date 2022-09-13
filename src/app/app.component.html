@@ -11,13 +11,17 @@
     <img class="solar-system-9" src="../assets/icon-svg/solar-system/solar-system-9.svg" alt="solar">
     <!-- solar-system-overlay -->
 
-    <app-nav-bar></app-nav-bar>
-    <app-main-page></app-main-page>
-    <app-services-page></app-services-page>
-    <app-benefits-page></app-benefits-page>
-    <app-start-page></app-start-page>
+    <app-nav-bar (pageTarget)="scrollToPage($event)"></app-nav-bar>
+
+    <app-main-page id="main"></app-main-page>
+    <app-services-page id="service"></app-services-page>
+    <app-benefits-page id="benefits"></app-benefits-page>
+    <app-start-page id="start"></app-start-page>
     <app-payment-section></app-payment-section>
-    <app-contact-page></app-contact-page>
+    <app-contact-page id="contact"></app-contact-page>
+
+    
+
     <div class="copyright-section">
         <p>Copyright ®2022 | All Rights Reserved</p>
     </div>
