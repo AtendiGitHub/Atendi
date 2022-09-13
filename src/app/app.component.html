@@ -12,7 +12,6 @@
         <img class="solar-system-8" src="../assets/icon-svg/solar-system/solar-system-8.svg" alt="solar">
         <img class="solar-system-9" src="../assets/icon-svg/solar-system/solar-system-9.svg" alt="solar">
     </div>
-    
     <!-- solar-system-overlay -->
 
 
@@ -23,20 +22,19 @@
         <img class="star-group-4" src="../assets/icon-svg/stars/star-group-4.svg" alt="stars">
         <img class="star-group-5" src="../assets/icon-svg/stars/star-group-5.svg" alt="stars">  
     </div>
-    
     <!-- stars-overlay -->
 
     <app-nav-bar (pageTarget)="scrollToPage($event)"></app-nav-bar>
-
-    <app-main-page id="main"></app-main-page>
-    <app-services-page id="service"></app-services-page>
-    <app-benefits-page id="benefits"></app-benefits-page>
-    <app-start-page id="start"></app-start-page>
-    <app-payment-section></app-payment-section>
-    <app-contact-page id="contact"></app-contact-page>
-
     
-
+    <div class="pages">
+        <app-main-page id="main"></app-main-page>
+        <app-services-page id="service"></app-services-page>
+        <app-benefits-page id="benefits"></app-benefits-page>
+        <app-start-page id="start"></app-start-page>
+        <app-payment-section></app-payment-section>
+        <app-contact-page id="contact"></app-contact-page>
+    </div>
+   
     <div class="copyright-section">
         <p>Copyright ®2022 | All Rights Reserved</p>
     </div>
