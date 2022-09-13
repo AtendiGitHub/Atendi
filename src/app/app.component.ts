@@ -15,6 +15,6 @@ export class AppComponent {
   ngOnInit() {this.router.navigate(["/"]);}
 
   scrollToPage(e:string){
-   document.getElementById(e)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(e)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
