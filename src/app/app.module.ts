@@ -12,6 +12,8 @@ import { PaymentSectionComponent } from './web-pages/payment-section/payment-sec
 import { ContactPageComponent } from './web-pages/contact-page/contact-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { SolarSystemOverlayComponent } from './styling-components/solar-system-overlay/solar-system-overlay.component';
+import { StarGroupOverlayComponent } from './styling-components/star-group-overlay/star-group-overlay.component';
 
 
 const routes: Routes = [
@@ -38,7 +40,7 @@ const routes: Routes = [
     BenefitsPageComponent, 
     StartPageComponent, 
     PaymentSectionComponent, 
-    ContactPageComponent
+    ContactPageComponent, SolarSystemOverlayComponent, StarGroupOverlayComponent
   ],
   imports: [
     BrowserModule,
