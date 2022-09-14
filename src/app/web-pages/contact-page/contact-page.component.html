@@ -12,17 +12,20 @@
         </div>
 
         <div class="row">
-            <input id="email" type="email" formControlName="email" placeholder="Email*">
+            <input name="email" id="email" type="email" formControlName="email" placeholder="Email*" required>
+            <div *ngIf="userData.controls['email'].errors && userData.controls['email'].touched || !isFormValid"
+            class="email-alert">email is required</div>
         </div>
 
-        <div class="row">
+        <div class="row" >
             <input id="phone" type="text" formControlName="phone" placeholder="Phone">
             <select name="countries" id="countries">
                 <option *ngFor="let country of countries"
                 [value]="country.name">{{country.name}}</option>
             </select>
         </div>
+        <!-- <h1>{{log(userData.controls['email'].errors)}}</h1> -->
     </form>
-    <app-button class="btn" [context]="'Lets Tallk'" (click)="sendData()"></app-button>
+    <app-button class="btn" [context]="'Lets Tallk'" (click)="sendData(userData.controls['email'].errors)" ></app-button>
 
 </div>

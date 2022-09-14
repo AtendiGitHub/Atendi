@@ -10,6 +10,7 @@ import * as countriesData from '../../../assets/countries.json';
 export class ContactPageComponent{
 
   @Output() userInputData = new EventEmitter<{}>();
+  isFormValid:boolean = true; 
 
   userData:FormGroup = new FormGroup({
     firstName: new FormControl(''),
@@ -21,8 +22,8 @@ export class ContactPageComponent{
 
   countries:{name:string}[] = (countriesData as any).default;
 
-  sendData(){
-    this.userInputData.emit(this.userData.value);
+  sendData(emailValidation:any){
+    emailValidation != null? console.log("not validate"): this.userInputData.emit(this.userData.value);
   }
-  
+
 }

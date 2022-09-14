@@ -49,13 +49,39 @@
 
     }
 
+    .email-alert{
+        position: absolute;
+        margin-left: -12vw;
+        margin-top: 1vh;
+        background-color: aliceblue;
+        padding: 0.7vh;
+        font-size: 1vw;
+        border-radius: 10px;
+        color: black;
+    }
+    
+    .email-alert:after{
+        content: "";
+        position: absolute;
+
+        width: 0; 
+        height: 0; 
+        border-top: 1.2vw solid transparent;
+        border-bottom: 1.2vw solid transparent;
+        border-left: 1.2vw solid aliceblue;
+
+        margin-top: -0.62vh;
+        margin-left: 0.2vw;
+    }
+
     input{
 
         width: 100%;
         height: 4.84004vh;
         margin-left: 0.625vw;
         margin-right: 0.625vw;
-        border: 2.35px solid rgba(52, 86, 254, 1);
+        border: 2.35px solid ;
+        border-color: rgba(52, 86, 254, 1);
         outline: none;
 
         //placeholder text
