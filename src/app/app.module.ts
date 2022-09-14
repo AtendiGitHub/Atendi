@@ -24,6 +24,8 @@ import { ButtonComponent } from './generic-components/button/button.component';
 //styling components
 import { StarGroupOverlayComponent } from './styling-components/star-group-overlay/star-group-overlay.component';
 import { SolarSystemOverlayComponent } from './styling-components/solar-system-overlay/solar-system-overlay.component';
+import { TooltipComponent } from './generic-components/tooltip/tooltip.component';
+import { DropdownComponent } from './generic-components/dropdown/dropdown.component';
 
 
 
@@ -49,7 +51,9 @@ const routes: Routes = [
     PaymentSectionComponent, 
     ContactPageComponent,
     StarGroupOverlayComponent,
-    SolarSystemOverlayComponent
+    SolarSystemOverlayComponent,
+    TooltipComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
