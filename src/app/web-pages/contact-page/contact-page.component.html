@@ -13,8 +13,11 @@
 
         <div class="row">
             <input name="email" id="email" type="email" formControlName="email" placeholder="Email*" required>
-            <div *ngIf="userData.controls['email'].errors && userData.controls['email'].touched || !isFormValid"
-            class="email-alert">email is required</div>
+
+            <app-tooltip
+            class="email-tooltip"
+            *ngIf="userData.controls['email'].errors && userData.controls['email'].touched || !isFormValid"
+            [context]="'email is required'"></app-tooltip>
         </div>
 
         <div class="row" >
@@ -27,5 +30,5 @@
     </form>
     <app-button class="btn" [context]="'Lets Tallk'" (click)="sendData(userData.controls['email'].errors)" ></app-button>
 
-    <app-tooltip></app-tooltip>
+    
 </div>
