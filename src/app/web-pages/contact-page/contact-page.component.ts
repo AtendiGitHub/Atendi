@@ -30,6 +30,13 @@ export class ContactPageComponent implements OnInit{
 
   sendData(emailValidation:any){
     emailValidation != null? console.log("not validate"): this.userInputData.emit(JSON.stringify(this.userData.value));
+    console.log(this.userData.value)
+  }
+
+  insertDropDownValue(value:string){
+    this.userData.patchValue({
+      country: value
+    })
   }
 
 }

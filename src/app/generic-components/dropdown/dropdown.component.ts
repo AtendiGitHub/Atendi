@@ -9,7 +9,7 @@ export class DropdownComponent {
 
   @Input() valuesList:string[] = ['canada', 'montenegreo', 'livan', 'clara'];
   @Input() dropDownName:string = "cool";
-  @Output() emitChosenValue =  new EventEmitter<string>();
+  @Output() passChosenValue =  new EventEmitter<string>();
 
   chosenValue:string = " ";
   hideOptions:boolean = true;
@@ -17,6 +17,6 @@ export class DropdownComponent {
   sendChosenValue(value:string){
     this.chosenValue = value;
     this.hideOptions = true;
-    this.emitChosenValue.emit(value);
+    this.passChosenValue.emit(value);
   }
 }
