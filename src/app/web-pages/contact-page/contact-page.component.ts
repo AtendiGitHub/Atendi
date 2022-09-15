@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import * as countriesData from '../../../assets/countries.json';
 
@@ -7,7 +7,7 @@ import * as countriesData from '../../../assets/countries.json';
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.less']
 })
-export class ContactPageComponent{
+export class ContactPageComponent implements OnInit{
 
   @Output() userInputData = new EventEmitter<{}>();
   isFormValid:boolean = true; 
@@ -20,7 +20,13 @@ export class ContactPageComponent{
     country: new FormControl('')
   });
 
-  countries:{name:string}[] = (countriesData as any).default;
+  countriesList:string[] = [];
+  
+  ngOnInit(): void {
+    (countriesData as any).default.forEach((country:{name:string}) => {
+      this.countriesList.push(country.name);
+    });
+  }
 
   sendData(emailValidation:any){
     emailValidation != null? console.log("not validate"): this.userInputData.emit(JSON.stringify(this.userData.value));

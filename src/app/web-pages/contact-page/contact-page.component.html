@@ -22,13 +22,15 @@
 
         <div class="row" >
             <input id="phone" type="text" formControlName="phone" placeholder="Phone">
-            <select name="countries" id="countries">
+            <!-- <select name="countries" id="countries">
                 <option *ngFor="let country of countries"
                 [value]="country.name">{{country.name}}</option>
-            </select>
+            </select> -->
+            <app-dropdown [dropDownName]="'country'"
+            [valuesList]="countriesList"></app-dropdown>   
         </div>
     </form>
     <app-button class="btn" [context]="'Lets Tallk'" (click)="sendData(userData.controls['email'].errors)" ></app-button>
 
-    
+ 
 </div>

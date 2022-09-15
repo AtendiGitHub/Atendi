@@ -1,1 +1,20 @@
-<p>dropdown works!</p>
+<div class="dropdown">
+
+    <div class="chosen-value-input" (click)="hideOptions = !hideOptions">
+        <p>{{chosenValue || dropDownName}}</p>
+        <img  [ngStyle]="{'transform': hideOptions === false ? 'rotate(180deg)':'rotate(0deg)'}"
+        class="arrowdown" 
+        src="../../../assets/down-filled-triangular-arrow (1).png" alt="arrowdown">
+    </div>
+
+    <div *ngIf="!hideOptions" class="options">
+        <div class="option-feild"
+        
+        *ngFor="let item of valuesList"
+        (click)="sendChosenValue(item)"
+        [ngClass]="{'chosen-option': chosenValue === item}">
+            <p>{{item}}</p>
+        </div>
+    </div>
+        
+</div>
