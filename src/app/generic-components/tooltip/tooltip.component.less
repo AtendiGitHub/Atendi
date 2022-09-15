@@ -1,0 +1,29 @@
+.tooltip{
+
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1vw;
+        padding: 0.5vh;
+        color: black;
+        margin: 0;
+
+    
+}
+
+.tooltip::after{
+    content: "";
+    width: 0; 
+    height: 0; 
+    margin-right: -34px;
+
+    border-top: 1.2vw solid transparent;
+    border-bottom: 1.2vw solid transparent;
+    border-left: 1.2vw solid aliceblue;
+
+}
