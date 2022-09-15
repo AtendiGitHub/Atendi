@@ -23,7 +23,7 @@ export class ContactPageComponent{
   countries:{name:string}[] = (countriesData as any).default;
 
   sendData(emailValidation:any){
-    emailValidation != null? console.log("not validate"): this.userInputData.emit(this.userData.value);
+    emailValidation != null? console.log("not validate"): this.userInputData.emit(JSON.stringify(this.userData.value));
   }
 
 }
