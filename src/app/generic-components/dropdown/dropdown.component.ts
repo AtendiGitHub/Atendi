@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.less']
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent {
 
   @Input() valuesList:string[] = ['canada', 'montenegreo', 'livan', 'clara'];
   @Input() dropDownName:string = "cool";
@@ -13,12 +13,6 @@ export class DropdownComponent implements OnInit {
 
   chosenValue:string = " ";
   hideOptions:boolean = true;
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   sendChosenValue(value:string){
     this.chosenValue = value;
