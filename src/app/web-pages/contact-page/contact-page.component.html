@@ -15,12 +15,8 @@
             <div class="email-conteiner">
                 <input type="email" 
                 (keydown)="isEmailValid()" name="email" id="email" type="email" formControlName="email" placeholder="Email Address" required>
-                <span *ngIf="userData.controls['email'].errors && !userData.controls['email'].touched || !isFormValid">(Required)</span>
+                <span *ngIf="userData.controls['email'].errors && !userData.controls['email'].touched ">(Required)</span>
             </div>
-            <!-- <app-tooltip
-            class="email-tooltip"
-            *ngIf="userData.controls['email'].errors && userData.controls['email'].touched || !isFormValid"
-            [context]="'email is required'"></app-tooltip> -->
         </div>
 
         <div class="row" >
