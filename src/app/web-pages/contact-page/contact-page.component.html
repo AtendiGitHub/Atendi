@@ -23,7 +23,9 @@
 
         <div class="row" >
             <input id="phone" type="text" formControlName="phone" placeholder="Phone">
-            <app-dropdown [dropDownName]="'country'"
+            <app-dropdown 
+            id="countries"
+            [dropDownName]="'country'"
             [valuesList]="countriesList"
             formControlName="country"
             (passChosenValue)="insertDropDownValue($event)"></app-dropdown>   
