@@ -12,7 +12,8 @@
         </div>
 
         <div class="row">
-            <input name="email" id="email" type="email" formControlName="email" placeholder="Email*" required>
+            <input type="email" 
+            (keydown)="isEmailValid()" name="email" id="email" type="email" formControlName="email" placeholder="Email*" required>
 
             <app-tooltip
             class="email-tooltip"

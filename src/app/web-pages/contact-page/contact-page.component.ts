@@ -29,7 +29,7 @@ export class ContactPageComponent implements OnInit{
   }
 
   sendData(emailValidation:any){
-    emailValidation != null? console.log("not validate"): this.userInputData.emit(JSON.stringify(this.userData.value));
+    emailValidation != null? this.isFormValid = false: this.userInputData.emit(JSON.stringify(this.userData.value));
     console.log(this.userData.value)
   }
 
@@ -37,6 +37,11 @@ export class ContactPageComponent implements OnInit{
     this.userData.patchValue({
       country: value
     })
+  }
+  isEmailValid(){
+    if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.userData.value.email) && this.userData.value.email != ""){
+      this.isFormValid = true;
+    }
   }
 
 }
